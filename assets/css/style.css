@@ -1,13 +1,16 @@
+/* universal selector page set up */
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+/* set background */
 body {
     background-color: #d9dcd6;
 }
-/* set header styling */
+
+/* Style header */
 header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -24,6 +27,7 @@ header h1 .seo {
     color: #d9dcd6;
 }
 
+/* style menu links in header section */
 nav {
     padding-top: 15px;
     margin-right: 20px;
@@ -37,15 +41,17 @@ nav ul li {
     margin-left: 25px;
 }
 
+/* apply to all anchored links */
 a {
     color: #ffffff;
     text-decoration: none;
 }
 
+/* set font size for non-header text */
 p {
     font-size: 16px;
 }
-
+/* Add in Hero Image */
 .hero {
     height: 800px;
     width: 100%;
@@ -101,17 +107,17 @@ aside {
     background-color: #2a607c;
 }
 
-.main-benefits {
+.benefits {
     margin-bottom: 32px;
     color: #ffffff;
 }
 
-.main-benefits h3 {
+.benefits h3 {
     margin-bottom: 10px;
     text-align: center;
 }
 
-.main-benefits img {
+.benefits img {
     display: block;
     margin: 10px auto;
     max-width: 150px;
