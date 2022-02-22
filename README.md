@@ -7,6 +7,7 @@ The purpose of this project is to improve key aspects of Horiseon's website so t
 Coding must also be revised to remove redundancies in either or both the HTML and CSS files and create a more distinct outline for each section of the HTML to more clearly define what they represent.  This will enable other collaborators who may want to work on this website to more easily follow the code.
 
 The current appearance of the web-site: 
+
 ![screenshot of website as originally coded](./assets/images/homework-demo.png)
 
 
@@ -27,9 +28,9 @@ The repository has been stored on [Github](https://github.com/lnd4812/code-refac
 ## Design
 Initial review of original source code and launch of website both indicated several problems in display, including load time, and functionality outside of accessibility issues.
 
-The first 10 commits  to GitHub comprise the range of changes made to meet the Acceptance Criteria this project![Key site design coding revisions and commits to GitHub](/assets/images/horiseon-main-design-commits-through-20-2-22.png) ; specific details of all changes added through each commit are accessible via the Commit History on [GitHub](https://github.com/lnd4812/code-refactor-challenge.git).
+The first 10 commits  to GitHub comprise the range of changes made to meet the Acceptance Criteria this project; ![Key site design coding revisions and commits to GitHub](/assets/images/horiseon-main-design-commits-through-20-2-22.png) specific details of all changes added through each commit are accessible via the Commit History on [GitHub](https://github.com/lnd4812/code-refactor-challenge.git).
 
-It was also noted that other aspects of the website not specified in the Acceptance Criteria could be better optimized for accessibility purposes.  The following revisions have also been made for Horiseon's consideration and potential acceptance:
+It was also noted that other aspects of the website not specified in the Acceptance Criteria could be better optimized for accessibility purposes.  The following -[[revisions have also been made for Horiseon's review and consideration:
 -   The **header**, **main** and **aside** sections all had backgrounds of slightly different shades of blue which seemed (to me) slightly incompatible with each other. <br>
     Revision(s) - changed background colour of Services **main** and Benefits **aside** to match "header": #2a607c.
 -   Black of icon images in **aside** would be difficult to see against the blue background by some users with seeing disabilities.
@@ -39,7 +40,7 @@ It was also noted that other aspects of the website not specified in the Accepta
 
 A complete list of all revisions to date may also be reviewed in the following document: [Summary of main revisions](./assets/Design-revisions-made).   
 
-
+ll6
 ## License
 [License](/LICENSE).
 
