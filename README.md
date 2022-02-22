@@ -40,7 +40,7 @@ A complete list of all revisions to date may also be reviewed in the following d
 
 
 ## License
-[Add License](https://github.com/lnd4812/code-refactor-challenge/blob/main/LICENSE)
+[Add License](/LICENSE).
 
 
 ## Credits and external Resources
