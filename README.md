@@ -6,7 +6,8 @@ The purpose of this project is to improve key aspects of Horiseon's website in o
 
 Coding must also be revised to remove redundancies in either or both the HTML and CSS files and create a more distinct outline for each section of the HTML to more clearly define what they represent.  This will enable other collaborators who may want to work on this website to more easily follow the code.
 
-The current appearance of the web-site: ![screenshot of website as originally coded](./assets/images/homework-demo.png)
+The current appearance of the web-site: 
+![screenshot of website as originally coded](./assets/images/homework-demo.png)
 
 
 ## Requirements
@@ -26,7 +27,7 @@ The repository has been stored on [Github](https://github.com/lnd4812/code-refac
 ## Design
 Initial review of original source code and launch of website both indicated several problems in display, including load time, and functionality outside of accessibility issues.
 
-The first 10 commits ![Key site design coding revisions and commits to GitHub](/assets/images/horiseon-main-design-commits-through-20-2-22.png) to GitHub comprise the range of changes made to meet the Acceptance Criteria this project; specific details of all changes added through each commit are accessible via the Commit History on [GitHub](https://github.com/lnd4812/code-refactor-challenge.git).
+The first 10 commits  to GitHub comprise the range of changes made to meet the Acceptance Criteria this project![Key site design coding revisions and commits to GitHub](/assets/images/horiseon-main-design-commits-through-20-2-22.png) ; specific details of all changes added through each commit are accessible via the Commit History on [GitHub](https://github.com/lnd4812/code-refactor-challenge.git).
 
 It was also noted that other aspects of the website not specified in the Acceptance Criteria could be better optimized for accessibility purposes.  The following revisions have also been made for Horiseon's consideration and potential acceptance:
 -   The **header**, **main** and **aside** sections all had backgrounds of slightly different shades of blue which seemed (to me) slightly incompatible with each other. <br>
@@ -40,7 +41,7 @@ A complete list of all revisions to date may also be reviewed in the following d
 
 
 ## License
-[Add License](/LICENSE).
+[Licensing information](/LICENSE).
 
 
 ## Credits and external Resources
@@ -49,10 +50,10 @@ A complete list of all revisions to date may also be reviewed in the following d
 -   [GIMP](https://www.gimp.org) image manipulation and image editing open source software used for photo-editing. 
 
 
-## Roadmap
-1.  Add coding to enable responsive website that can be viewed on other platforms or screen size in addition to 768px.
+## Task list
+[] Add coding to enable responsive website that can be viewed on other platforms or screen size in addition to 768px.
 
 
 ## Contact Information
-email: laureldavid64@gmail.com
+For any questions, comments and/or issues, please contact me at: email: laureldavid64@gmail.com
 
