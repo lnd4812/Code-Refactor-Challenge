@@ -40,7 +40,7 @@ It was also noted that other aspects of the website not specified in the Accepta
 
 A complete list of all revisions to date may also be reviewed in the following document: [Summary of main revisions](./assets/Design-revisions-made).   
 
-ll6
+
 ## License
 [License](/LICENSE).
 
@@ -56,7 +56,7 @@ ll6
 
 
 ## Contribution
-Laurel David (lnd4812)
+Laurel David (github.com/lnd4812)
 
 
 ## Contact Information
