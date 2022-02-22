@@ -2,7 +2,7 @@
 
 
 ## Description
-The purpose of this project is to improve key aspects of Horiseon's website in order be to more accessible to people with disabilities.  At the same time, revisions must retain the the relative appearance or functioning of the site.  Improvements, such as how the site loads and displays visually and featuring "alt" definitions with each of the images will be implemented in such a manner as to strengthen Horiseson's position in on-line search engines.  This includes a more meaningful title for their homepage, which was updated to reflect their full corporate name.  By doing so, the combination of "Social Solution Services" should be more easily and quickly recognized in industry specific web searches.
+The purpose of this project is to improve key aspects of Horiseon's website so that is may be more accessible to people with disabilities.  At the same time, revisions applied to accomplish this must retain the the relative appearance and functioning of the site.  Improvements, such as how the site loads and displays visually and featuring "alt" definitions with each of the images should also be implemented in such a manner as to strengthen Horiseson's position in on-line search engines.  This includes a more meaningful title for their homepage, which was updated to reflect their full corporate name.  By doing so, the combination of "Social Solution Services" should be more easily and quickly recognized in industry specific web searches.
 
 Coding must also be revised to remove redundancies in either or both the HTML and CSS files and create a more distinct outline for each section of the HTML to more clearly define what they represent.  This will enable other collaborators who may want to work on this website to more easily follow the code.
 
@@ -14,7 +14,7 @@ The current appearance of the web-site:
 No special requirements 
 
 
-## Languages
+## Built With
 -   HTML
 -   CSS
 
@@ -41,7 +41,7 @@ A complete list of all revisions to date may also be reviewed in the following d
 
 
 ## License
-[Licensing information](/LICENSE).
+[License](/LICENSE).
 
 
 ## Credits and external Resources
@@ -52,6 +52,10 @@ A complete list of all revisions to date may also be reviewed in the following d
 
 ## Task list
 [] Add coding to enable responsive website that can be viewed on other platforms or screen size in addition to 768px.
+
+
+## Contribution
+Laurel David (lnd4812)
 
 
 ## Contact Information
