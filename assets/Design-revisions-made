@@ -1,0 +1,14 @@
+Coding Functionality and readability
+•	“Search Engine Optimization” in <nav> section not linked to corresponding <main> section, requiring addition of an <id> attribute.
+•	Distinct sections defined by <div> and class tags revised to Semantic HTML tags, making flow of coder easier to follow.  Updated CSS coding accordingly.
+•	As the same references used as <id> attributes were also used as class names for each of the 3 services in the <main> section and similar CSS coding was used for all 3, assigned all 3 the class of “services” and revised <div> containers to Semantic HTML <article> tags.
+•	Consolidated all 3 benefits in <aside> section into 1 <div> with same class reference.  CSS coding noted to the same for all 3 and subsequently consolidated for all 3.
+•	Removed CSS coding for <header div ul> list style – redundant.
+
+
+Appearance and Display
+•	All image files were too large to enable fast loading of the site, although some classmates have indicated they did not encounter this issue ->  For loading similar to mine, reduced all images to size that would load quickly without too significantly affecting image quality, updating <img> tags accordingly.
+•	No “alt” descriptions were included with the image files -> added descriptive “alt” comments for all images.
+•	Colours of <header>, <main> and <aside> sections were slightly different shades of blue as to almost clash with each other, particularly <main> and <aside> sections –> changed background colour of both to match that of <header>: #2a607c for a more synchronous appearance and flow.
+•	Black icon images in <aside> could be difficult for those with seeing disabilities to make out against the blue background -> changed colour of icons to white using GIMP and updated <img> tags accordingly.
+•	Bottom margins of <main> and <aside> sections were at different margins from bottom of page, presenting a somewhat disconnected appearance -> created new <section> with a class of “container” and adjusted the height of the <aside> section accordingly for viewing at 786px.  Having both sections within the same larger section should make it easier to adjust proportionally for viewing on other platforms once responsive CSS has been added.

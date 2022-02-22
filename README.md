@@ -1,7 +1,7 @@
 # Code Refactor for Horiseon Social Solution Services, Inc.
 
 ## Description
-The purpose of this project is to improve key aspects of Horiseon's website in order be to more accessible to people with disabilities, without also materially affecting the appearance or functioning of the site.  Improvements, such as how the site loads and displays visually and featuring "alt" definitions with each of the images will be implemented in such a manner as to strengthen Horiseson's position in on-line search engines.  This includes a more meaningful title for their homepage, which was updated to reflect their full corporate name.  By doing so, the combination of "Social Solution Services" should be more easily and quickly recognized in industry specific web searches.
+The purpose of this project is to improve key aspects of Horiseon's website in order be to more accessible to people with disabilities.  At the same time, revisions must retain the the relative appearance or functioning of the site.  Improvements, such as how the site loads and displays visually and featuring "alt" definitions with each of the images will be implemented in such a manner as to strengthen Horiseson's position in on-line search engines.  This includes a more meaningful title for their homepage, which was updated to reflect their full corporate name.  By doing so, the combination of "Social Solution Services" should be more easily and quickly recognized in industry specific web searches.
 
 Coding must also be revised to remove redundancies in either or both the HTML and CSS files and create a more distinct outline for each section of the HTML to more clearly define what they represent.  This will enable other collaborators who may want to work on this website to more easily follow the code.
 
@@ -18,12 +18,12 @@ No special requirements
 
 ## Deployment
 This site has been published via [Github Pages](https://lnd4812.github.io/code-refactor-challenge/)<br/>
-The repository has been stored on [Github]([https://github.com/lnd4812/code-refactor-challenge.git).
+The repository has been stored on [Github](https://github.com/lnd4812/code-refactor-challenge.git).
 
 ## Design
 Initial review of original source code and launch of website both indicated several problems in display, including load time, and functionality outside of accessibility issues.
 
-The  total of 10 commits ![Key site design coding revisions and commits to GitHub](/assets/images/horiseon-main-design-commits-through-20-2-22.png) coding commits to github through 20.2.22.png) to GitHub comprise the range of changes made to meet the Acceptance Criteria this project; specific details of all changes added through each commit are accessible via the Commit History on [GitHub](https://github.com/lnd4812/code-refactor-challenge.git).
+The first 10 commits ![Key site design coding revisions and commits to GitHub](/assets/images/horiseon-main-design-commits-through-20-2-22.png) to GitHub comprise the range of changes made to meet the Acceptance Criteria this project; specific details of all changes added through each commit are accessible via the Commit History on [GitHub](https://github.com/lnd4812/code-refactor-challenge.git).
 
 
 It was also noted that other aspects of the website not specified in the Acceptance Criteria could be better optimized for accessibility purposes.  The following revisions have also been made for Horiseon's consideration and potential acceptance:<br/>
@@ -34,8 +34,9 @@ It was also noted that other aspects of the website not specified in the Accepta
 -   Bottom margins of **main** and **aside** sections were noted to be uneven and therefore (to me), somewhat discordant visually.
     Revision(s) - created **section** with a class of * *container* * to include both sections as sub-sections, adjusted bottom margin and spacing of **aside** to match bottom margin of **main** when viewed at 786px.  I think this may also make it easier to adjust when site updated to be responsive when viewed in other platforms or screen sizes.
 
-A complete list of all revisions to date may also be reviewed in the following document: [Summary of main revisions](/assets/Revisions-made.docx).   
+A complete list of all revisions to date may also be reviewed in the following document: [Summary of main revisions](./assets/Design-revisions-made).   
 
 ## Roadmap
 1.  Include coding to enable responsive website that can be viewed on other platforms or screen size in addition to 768px.
+2.  Add Licens text.
 
