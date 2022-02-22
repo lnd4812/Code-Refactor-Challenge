@@ -51,7 +51,7 @@ A complete list of all revisions to date may also be reviewed in the following d
 
 
 ## Task list
-[] Add coding to enable responsive website that can be viewed on other platforms or screen size in addition to 768px.
+[ ] Add coding to enable responsive website that can be viewed on other platforms or screen size in addition to 768px.
 
 
 ## Contribution
