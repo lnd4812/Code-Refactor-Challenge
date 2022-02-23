@@ -3,7 +3,6 @@ Coding Functionality and readability
 •	Distinct sections defined by <div> and class tags revised to Semantic HTML tags, making flow of coder easier to follow.  Updated CSS coding accordingly.
 •	As the same references used as <id> attributes were also used as class names for each of the 3 services in the <main> section and similar CSS coding was used for all 3, assigned all 3 the class of “services” and revised <div> containers to Semantic HTML <article> tags.
 •	Consolidated all 3 benefits in <aside> section into 1 <div> with same class reference.  CSS coding noted to the same for all 3 and subsequently consolidated for all 3.
-•	Removed CSS coding for <header div ul> list style – redundant.
 
 
 Appearance and Display
