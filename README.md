@@ -2,11 +2,11 @@
 
 
 ## Description
-The purpose of this project is to improve key aspects of Horiseon's website so that is may be more accessible to people with disabilities.  At the same time, revisions applied to accomplish this must retain the the relative appearance and functioning of the site.  Improvements, such as how the site loads and displays visually and featuring "alt" definitions with each of the images should also be implemented in such a manner as to strengthen Horiseson's position in on-line search engines.  This includes a more meaningful title for their homepage, which was updated to reflect their full corporate name.  By doing so, the combination of "Social Solution Services" should be more easily and quickly recognized in industry specific web searches.
+The purpose of this project is to improve key aspects of Horiseon's website so that it may be more accessible to people with disabilities.  At the same time, revisions applied to accomplish this must retain the relative appearance and functioning of the site.  Improvements, including, but not limited to, how the site loads and displays visually and featuring "alt" definitions with each of the images, should also be implemented in such a manner as to strengthen Horiseson's position in on-line search engines.  This also indicates a more meaningful title for their homepage, which was updated to reflect their full corporate name.  By doing so, the combination of "Social Solution Services" should be more easily and quickly recognized in industry related web searches.
 
 Coding must also be revised to remove redundancies in either or both the HTML and CSS files and create a more distinct outline for each section of the HTML to more clearly define what they represent.  This will enable other collaborators who may want to work on this website to more easily follow the code.
 
-The current appearance of the web-site: 
+The current appearance of the website: 
 
 ![screenshot of website as originally coded](./assets/images/homework-demo.png)
 
@@ -28,9 +28,9 @@ The repository has been stored on [Github](https://github.com/lnd4812/code-refac
 ## Design
 Initial review of original source code and launch of website both indicated several problems in display, including load time, and functionality outside of accessibility issues.
 
-The first 10 commits  to GitHub comprise the range of changes made to meet the Acceptance Criteria this project; ![Key site design coding revisions and commits to GitHub](/assets/images/horiseon-main-design-commits-through-20-2-22.png) specific details of all changes added through each commit are accessible via the Commit History on [GitHub](https://github.com/lnd4812/code-refactor-challenge.git).
+The first 10 commits  to GitHub comprise the range of changes made to meet the Acceptance Criteria for this project; ![Key site design coding revisions and commits to GitHub](/assets/images/horiseon-main-design-commits-through-20-2-22.png) specific details of all changes added through each commit are accessible via the Commit History on [GitHub](https://github.com/lnd4812/code-refactor-challenge.git).
 
-It was also noted that other aspects of the website not specified in the Acceptance Criteria could be better optimized for accessibility purposes.  The following -[[revisions have also been made for Horiseon's review and consideration:
+It was also noted that other aspects of the website not specified in the Acceptance Criteria could be better optimized for accessibility purposes.  The following revisions have also been made for Horiseon's review and consideration:
 -   The **header**, **main** and **aside** sections all had backgrounds of slightly different shades of blue which seemed (to me) slightly incompatible with each other. <br>
     Revision(s) - changed background colour of Services **main** and Benefits **aside** to match "header": #2a607c.
 -   Black of icon images in **aside** would be difficult to see against the blue background by some users with seeing disabilities.
@@ -46,13 +46,13 @@ A complete list of all revisions to date may also be reviewed in the following d
 
 
 ## Credits and external Resources
--   A full description of Horiseon's criteria were outlined here: [Module 1 Challenge Project Page](https://courses.bootcampspot.com/courses/1181/assignments/23346?module_item_id=458708).  
+-   A full description of Horiseon's criteria is outlined here: [Module 1 Challenge Project Page](https://courses.bootcampspot.com/courses/1181/assignments/23346?module_item_id=458708).  
 -   Original source code cloned from [Designated Repository](https://github.com/coding-boot-camp/urban-octo-telegram).  
 -   [GIMP](https://www.gimp.org) image manipulation and image editing open source software used for photo-editing. 
 
 
 ## Task list
-[ ] Add coding to enable responsive website that can be viewed on other platforms or screen size in addition to 768px.
+[ ] Add coding to enable responsive website that can be viewed on other platforms, devices and/or screen sizes in addition to 768px.
 
 
 ## Contribution
