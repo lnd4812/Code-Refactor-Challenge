@@ -36,7 +36,7 @@ It was also noted that other aspects of the website not specified in the Accepta
 -   Black of icon images in **aside** would be difficult to see against the blue background by some users with sight disabilities.
     Revision(s) - changed colour of icons from black to white,updating <img> tags accordingly in style.css.
 -   Bottom margins of **main** and **aside** sections were noted to be uneven and therefore (to me), somewhat discordant visually.
-    Revision(s) - created **section** with a class of * *about-us* * to include both sections as sub-sections, adjusted bottom margin and spacing of **aside** to match bottom margin of **main** when viewed at 786px.  
+    Revision(s) - created **section** with a class of * *featuring* * to include both sections as sub-sections, adjusted bottom margin and spacing of **aside** to match bottom margin of **main** when viewed at 786px.  
 
 A complete list of all revisions to date may also be reviewed in the following document: [Summary of main revisions](./assets/Design-revisions-made).   
 
