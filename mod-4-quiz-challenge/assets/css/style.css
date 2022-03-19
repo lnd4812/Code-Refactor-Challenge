@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --primary:rgb(225, 226, 233);
+    --secondary: rgb(4, 34, 73);
+    --tertiary: rgb(192, 246, 253);
+      }
+  
+  body {
+    background: rgb(248, 249, 253);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--secondary-color);
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+    text-align: center; 
+    
+  }
+
+  .header {
+    background-color: var(--primary-color);
+    display: inline-block;
+    position: fixed;
+    margin-bottom: 100px;
+  }
+
+  .scoresContainer {
+    float: left;
+    width: 150px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 40px;
+  }
+
+  .timerContainer {
+    float: right;
+    width: 150px;
+    height: 20px;
+    text-align: left;
+    display: flex;
+    justify-content: center; 
+    margin-right: 40px;
+  }
+
+  .quiz-Container {
+    text-align: center;
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: center;       
+  }
+
+  .intro {
+    margin: 200px auto;
+    color: rgb(4, 34, 73);
+    text-align: center;
+  }
+
