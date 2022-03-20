@@ -13,22 +13,23 @@
         <title>
             <h1>Codemaster Quiz</h1>
         </title>
-        <div class="scoresContainer">
-            <a href="";>View High Scores</a>   
-        </div>
         <div class="timerContainer">
            <span class="timer"><h4>Time Left:</h4>
             <div class="time-display">
                 <p>seconds</p>
             </div>
-        </span>
+            </span>
        </div>
     </header>
     <main>
         <section class="quiz-container">
+            <!--display link to high scores-->
+            <div class="scoresContainer">
+                <a href="";>View High Scores</a>   
+            </div>
             <!--set up the intro display-->
-            <section class="intro" id="start">
-                <h1 class="quiz-title">Coding Quiz Challenge</h1>
+           <section class="intro" id="start">
+           <h1 class="quiz-title">Coding Quiz Challenge</h1>
                 <br  />
                 <p>Try to answer the following code-related questions within the time limit</p>
                 <p>Keep in mind that incorrect answers will penalize your score/time by ten seconds</p>         
@@ -39,8 +40,9 @@
             </section>
         </section>    
         <section class="question-section" id="quiz-questions">
+            <p>Please choose one of the 4 options in the following:</p>
         </section>
-        <section class="score-container" id="allDone">
+        <section class="score-container" id="all-done">
               <div class="capture-high-score">
                <input type="text" name="high-scorer" class="text-input" placeholder="Enter your initials" />
             </div>
@@ -52,7 +54,7 @@
             <div class="score-display">
                 <input type="text" name="high-scorer" class="text-input" />
                 <div class="score-buttons">
-                    <button class="btn" id="go-back" type="button"><a href="">Go Back</a></button>
+                    <button class="btn" id="go-back" type="button"><a href="#all-done">Go Back</a></button>
                     <button class="btn" id="clear-scores" type="button">Clear High Scores</button>
                 </div>
             </div>
@@ -62,7 +64,7 @@
         &copy; 2022 by lnd4812
     </footer>
 
-<script src="./assets/js/script.jp"></script>
+<script src="./assets/js/script.js"></script>
 
 </body>
 </html>
