@@ -11,9 +11,9 @@ var highScoreDisplayEl = document.querySelector("#high-scores");
 var enterScorerInit = document.querySelector("#all-done");
 var formEl = document.createElement("#highScoreDisplayForm");
 var timerEl = document.querySelector(".timer");
-var quesNum = 0; //start run through of questions at first item in array
+var quesNum = 0; //start run through of questions at first item in array 
 var quizTime = 60; // initiate clock at 60 seconds
-var score = ""; // score is empty at first run through
+var finalScore = ""; // score is empty at first run through
 
 
 // create array rom querySelector element to store questions and answers with inner array for quiz choices     
@@ -50,7 +50,6 @@ timerEl.textContent = quizTime + ' seconds';
 quizTime--;
 
 
-
 // start the process when "start quiz" button pressed 
 startBtn.addEventListener("click", startQuiz);
 
@@ -60,57 +59,67 @@ function quizTimer() {
   quizQuestionsSetEl.style.display = "none";
 
   // call first question, position 0 in array, to start quiz
-var quizTimeDisplay = setInterval(function() {
-  // user answers questions until finished or time runs out
-  If (quizTime <= 0 || quesNum === quizQuestions.length); {
-    // user is out of time or finished the quiz, 
-    clearInterval(quizTimeDisplay); 
-    document.getElementById("timer").textContent = "The quiz has ended";
-    // go to scorer Initial Input field
-    inputScore();
+  var quizTimeDisplay = setInterval(function() {
+    // user answers questions until finished or time runs out
+    If (quizTime <= 0 || quesNum === quizQuestions.length); {
+      // user is out of time or finished the quiz, 
+      clearInterval(quizTimeDisplay); 
+      document.getElementById("timer").textContent = "The quiz has ended. Thank you for playing.";
+      // go to scorer Initial Input field
+      inputScore();
     } else {
       document.getElementById("timer").textContent = "Time remaining";
     } 
- // decrease time by 1 second
-quizTime = quizTime--
-  }, 1000);
+    // decrease time by 1 second
+    quizTime--;
+    }, 1000);
 };
  
 // quiz question process 
-function quizRunThrough(quesNumber) {// function and # of question)
+function quizRunThrough(quesNum) {// function and # of question)
   if (quizTime > 0 && quizQuestions.length < 5) {
     document.querySelector("#quiz-questions").textContent = quizQuestions[quesNum].question;
     // set answer selection to empty
     answerOptionEl.innerHTML = ""; 
   // create buttons for answer options for each question in sequence
-  for(var i =0; i < quizQuestions.length; i++ ) {
+  for(var i = 0; i < quizQuestions.length; i++ ) {
     var option = document.createElement('button');
     option.setAttribute("class", "option-btn"); 
     option.setAttribute("value", quizQuestions[quesNum].choices[i]);
     option.textContent = quizQuestions[quesNum].choices[i];
-    option.onclick = optionCheck;
+    option.onclick = checkAnswer;
     answerOptionEl.appendChild(option);
   };
-  }  else { 
-    inputScore();
+  } else { 
+      inputScore();
 }
-
 // check if answer correct or wrong
-function optionCheck();
-//if user answers question incorrectly, display "wrong" beneath 
-  if(quizQuestions)
-// create element with text.content - wrong answer. you lose 10 seconds, quizTime - 10
-// if user answers question correctly, display correct and proceed to next question - use index #
+function checkAnswer();
 
+ //if user answers question incorrectly, display "wrong" and dock 10 seconds from time, otherwise proceed to next question 
+  if(answerOptionEl === correctChoice) {
+    alert("Wrong! You lose 10 seconds");
+    quizTime = quizTime - 10;
+  } else {
+    alert("Correct!");
+    i++;
+  }
+
+quizTimer();
 // if time = 0 before user has finished answering all questions, highScore value = 0.  display "try again next time"
 
+function inputScore() {
 // if time > 0 and user has answered all questions, display final score based on quiz-time 
+finalScore = quizTime;
+quies
 // add function to end game and go to next 
 var highScoreTime = document.querySelector("#quiz-time");
 // style display = "none";
 // then style display = "inherit"
   }
-countdown();
+
+
+
 // User inputs initials after finishing quiz and initials are stored with highScoreTime in local storage
 // need to ensure user enters 2 initials only
 

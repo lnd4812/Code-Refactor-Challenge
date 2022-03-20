@@ -1,7 +1,5 @@
 * {
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
   }
   /* disabled - due to whatever I did to my repository, it appears that this cannot point to correct root for this directory */
   :root {
@@ -21,22 +19,20 @@
     width: 100%;
     height: 50px;
     display: flex;
-    align-items: center;
+    justify-content: flex-end;
     margin: 0 auto 0 50px;
   }
-  
-  
+    
   .timerContainer {
     float: right;
     width: 30%;
     height: 20px;
-    display: inline;
-    text-align: right;
-    margin-top: 20px;
+    display: block;
+    text-align: center;
     padding-right: 5px;
-      }
+  }
 
-  .timerContainer h4 {
+  .timerContainer h4, .timerContainer p {
     color: rgb(179, 213, 241);
   }
   .time-display {
