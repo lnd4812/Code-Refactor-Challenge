@@ -8,6 +8,7 @@ var quizQuestionSetEl = document.querySelector("#quiz-questions");
 var highScoreDisplayEl = document.querySelector("#high-scores");
 var formEl = document.createElement("#highScoreDisplayForm");
 var timerEl = document.getElementById("");
+var quesNumber = 0;
 var quizTime = 60;
 var score = 0;
 
@@ -22,7 +23,6 @@ function quizTimer = () {
 // section is not visible until start button clicked
   quizQuestionsSetEl.style.display = "none";
 // call first question, position 0 in array, to start quiz
-questionNumber(0);
 var quizTimeDisplay = setInterval(function() {
 // user answers questions until finished or time runs out
   If (quizTime <= 0 || quizQuestions.length === 5) 
@@ -50,7 +50,7 @@ for(var i =0; i < quizQuestions.length; i++ ) {
   var option = document.createElement('button');
   option.setAttribute("class", "option-btn"); 
   // review what this is
-  option.setAttribute("value", questions[number].choices[]);
+  option.setAttribute("value", questions[quesNumber].choices[i]);
   // add coding to change button color on click, check answer and response correct or wrong
 } else {
   // call function to take user to All Done page
@@ -92,6 +92,7 @@ quizQuestionSetEl =
   quizTime--;
 }
 // if user answers question incorrectly, display "wrong" beneath 
+
 // create element with text.content - wrong answer. you lose 10 seconds, quizTime - 10
 // if user answers question correctly, display correct and proceed to next question - use index #
 
@@ -105,6 +106,7 @@ var highScoreTime = document.querySelector("#quiz-time");
   }
 countdown();
 // User inputs initials after finishing quiz and initials are stored with highScoreTime in local storage
+// need to ensure user enters 2 initials only
 var highScorerInit = document.querySelector("#high-scorer");
 var addScoreButton = document.querySelector("#add-score");
 
@@ -116,50 +118,25 @@ addScore.addEventListener("click", function(event) {
     highScoreInit: highScoreInit.value.trim()
 };
 
+if (highScoreInit.length > 2) {
+  alert("This field is limited to 2 characters only; please try again");
+  return false;
+{
+  else {
+
   // set new submission to local storage 
   localStorage.setItem("highScorer", JSON.stringify(highScorer));
-  
+};  
 // High Scores page will feature a blank input field that displays up to top 3 scores, each of the top 3 numbers (so need ordered list here)
 
-// add two buttons, one to Go Back to previous page, one to Clear High Scores
+// set event listeners for click of either Go Back or Clear High Scores button on High Scores page
 // create edit button
-var goBackButtonEl = document.createElement("button");
-goBackButtonEl.textContent = "Go Back";
-goBackButtonEl.className = "btn edit-btn";
-goBackButtonEl.setAttribute("", ());
-highScoreDisplayEl.appendChild(goBackButtonEl);
+var goBackButton = document.querySelector("#go-back");
+
+var clearHighScores = document.querySelector("#clear-scores");
 
 
-var clearHighScoresEl = document.createElement("button");
-clearHighScoresButtonEl.textContent = "Clear High Scores";
-clearHighScoresButtonEl.className = "btn edit-btn";
-clearHighScoresButtonEl.setAttribute("", ());
-highScoreDisplayEl.appendChild(clearHighScoresButtonEl);
-
-
-// Initial quiz display requires countdown timer in top right corner
-
-
-// create countdown timer in top right corner: persistent and stores number that is allocated to score when Quiz is finished
-
-// create function to begin quiz when "Start Quiz" button is clicked 
-//var startQuiz() {} 
-
-// for each question, created 4 ordered list items as buttons which change colour when clicked (eventListener and attribute change)
-//answer "correct" or "wrong" after button pressed, under <hr>; adjust time if wrong
-// proceed to next set of questions
-// do this 5 times; stop early if timer runs to 0.  
-// if time left when player is finished, time = score, otherwise 0 (while time>0)
-// done page will display score and feature an input field for player to enter initials.  
 //Score & Initials stored in Local storage. display top 3 scores - need function to update that
-
-// Create ordered list element for each set of 4 questions
-var listEl = document.createElement("ol");
-// Create ordered list items
-
-
-// appendChild differently for each question?
-};
 
 startQuiz();
 
@@ -167,17 +144,15 @@ startQuiz();
 // add event listener to start quiz when button clicked
 startBtn.addEventListener("click", startQuiz);
   
-// for edit and delete buttons
-pageContentEl.addEventListener("click", );
+// for submitting initials with score
+.addEventListener("click", );
 
-// for changing the status
-pageContentEl.addEventListener("change", );
+// for back button
+goBackButton.addEventListener("click", goback );
 
 // Attach event listener to restore timer to 60 once start quiz button is clicked
-timerEl.addEventListener("click", function() {
-  count++;
-  setCounterText();
-});
+clearHighScores.addEventListener("click", clearscores) {
+  
 
 // Attach event listener to decrement button element
 decrementEl.addEventListener("click", function() {

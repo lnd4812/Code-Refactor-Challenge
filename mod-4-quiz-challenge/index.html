@@ -24,18 +24,20 @@
         </span>
        </div>
     </header>
-     <section class="quiz-container">
-        <!--set up the intro display-->
-        <section class="intro" id="start">
-            <h1 class="quiz-title">Coding Quiz Challenge</h1>
-            <br  />
-            <p>Try to answer the following code-related questions within the time limit.  Keep in mind that incorrect answers will penalize your score/time by ten seconds</p>         
-            <br/>    
-            <div class="start-button">
+    <main>
+        <section class="quiz-container">
+            <!--set up the intro display-->
+            <section class="intro" id="start">
+                <h1 class="quiz-title">Coding Quiz Challenge</h1>
+                <br  />
+                <p>Try to answer the following code-related questions within the time limit</p>
+                <p>Keep in mind that incorrect answers will penalize your score/time by ten seconds</p>         
+                <br/>    
+                <div class="start-button">
                     <button class="btn" id="#start" type="button">Start Quiz</button>
                 </div>
-        </section>
-    </section>    
+            </section>
+        </section>    
         <section class="question-section" id="quiz-questions">
         </section>
         <section class="score-container" id="allDone">
@@ -49,10 +51,11 @@
         <section class="score-output" id=#high-scores>
             <div class="score-display">
                 <input type="text" name="high-scorer" class="text-input" />
-                <button class="btn" id="go-back" type="button">Go Back</button>
-                <button class="btn" id="clear-scores" type="button">Clear High Scores</button>
+                <div class="score-buttons">
+                    <button class="btn" id="go-back" type="button"><a href="">Go Back</a></button>
+                    <button class="btn" id="clear-scores" type="button">Clear High Scores</button>
+                </div>
             </div>
-        </section>
         </section>
     </main>
     <footer>

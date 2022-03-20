@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0;
   }
-  
+  /* disabled - due to whatever I did to my repository, it appears that this cannot point to correct root for this directory */
   :root {
     --primary:rgb(179, 213, 241);
     --secondary: rgb(3, 37, 65);
@@ -12,21 +12,25 @@
   
   body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 100%;
+    margin: auto;
+    
   }
 
   header {
-    background: var(--secondary-color);
-    width: 65%;
+    background: rgb(3, 37, 65);
+    width: 100%;
     height: 50px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 50px;
   }
+  
 
   .scoresContainer {
     float: left;
-    width: 25%;
+    width: 30%;
     height: 20px;
     text-align: center;
     margin-top: 20px;
@@ -34,53 +38,62 @@
   }
 
   .scoresContainer a {
-  color: var(--primary-color);
+  color: rgb(179, 213, 241);
   }
 
   .timerContainer {
     float: right;
-    width: 25%;
+    width: 30%;
     height: 20px;
-    text-align: right;
     display: inline;
+    text-align: left;
     margin-top: 20px;
-    padding-right: 25px;
-  }
+    padding-right: 5px;
+      }
 
   .timerContainer h4 {
-    color: var(--primary-color);
+    color: rgb(179, 213, 241);
+  }
+  .time-display {
+    float: left;
+    display: inline;
+    height: 20px;
   }
 
+  .time-display p {
+    color: rgb(179, 213, 241);
+  }
+  
+
   footer {
-    width: 75%;
+    width: 100%;
     text-align: center;
-    color: var(--secondary-color);
+    color: rgb(3, 37, 65);
     font-size: 10px; 
   }
 
   .quiz-container {
-    width: 75%;
+    width: 100%;
     text-align: center;
-    color: var(--secondary-color);
+    color: rgb(3, 37, 65);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;     
   }
 
-  .time-display p {
-    color: var(--primary-color);
-  }
-
+  
   .intro {
-    width: 65%;
+    width: 100%;
     height: 300px;
     margin: 100px auto;
     text-align: center;
-    border-bottom: 2px solid  var(--secondary-color);
+    line-height: 1.5;
+    border-bottom: 2px solid  rgb(3, 37, 65);
+    
   }
 
-.question-section, .score-container, .score-output {
-  width: 65%;
+  .question-section, .score-container, .score-output {
+  width: 100%;
   height: 300px;
   text-align: center;
 }
@@ -89,22 +102,23 @@
   display: inline-block;
   border-radius: 12px;
   border: none;
-  background: var(--secondary-color);
+  background: rgb(3, 37, 65);
+  color: #c4def0;
   position: relative;
   padding: 10px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
+  margin: 10px 5px 5px 5px;
+  }
 
 .btn:active {
-  color: var(--tertiary-color);
+  color:  #32678b;
 }
   
 .text-input {
   display: inline-block;
   border-radius: 5px;
-  border: 1px solid var(--tertiary-color);
-  background: var(--tertiary-color);
+  border: 1px solid  #c4def0;
+  background:  #c4def0;
   position: relative;
   padding: 5px;
+  color: rgb(3, 37, 65);
 }
