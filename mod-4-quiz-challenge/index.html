@@ -17,29 +17,36 @@
             <a href="";>View High Scores</a>   
         </div>
         <div class="timerContainer">
-            <h4>Time Left:</h4>
+           <span class="timer"><h4>Time Left:</h4></span>
        </div>
     </header>
-     <main class="quiz-container">
+     <section class="quiz-container">
         <!--set-up-the-intro-display-->
-        <section class="intro" id="intro-page">
+        <section class="intro" id="start">
             <h1 class="quiz-title">Coding Quiz Challenge</h1>
-            <p class="instructions">Try to answer the following code-related questions within the time limit.  Keep in mind that incorrect answers will penalize your score/time by ten seconds</p>           
+            <p>Try to answer the following code-related questions within the time limit.  Keep in mind that incorrect answers will penalize your score/time by ten seconds</p>         
                 <div class="start-button">
                     <button class="btn" id="#start" type="button">Start Quiz</button>
                 </div>
         </section>
-           
-            
-        <section id="allDone">
-            <div class="form-group">
-                    <input type="text" name="task-name" class="text-input" placeholder="Enter your initials" />
-                </div>
-                <div class="">
-                    <button class="btn" id="#inputScore" type="submit">Submit</button>
-                </div>
-            </section>   
-            </main>
+        <section class="question-section" id="quiz-questions">
+        </section>
+        <section class="score-container" id="allDone">
+              <div class="capture-high-score">
+               <input type="text" name="high-scorer" class="text-input" placeholder="Enter your initials" />
+            </div>
+            <div class="scores-input">
+                <button class="btn" id="#inputScore" type="submit">Submit</button>
+            </div>
+        </section>   
+        <section class="score-output" id=#high-scores>
+            <div class="score-display">
+                <input type="text" name="high-scorer" class="text-input" />
+                <button class="btn" id="go-back" type="button">Go Back</button>
+                <button class="btn" id="clear-scores" type="button">Clear High Scores</button>
+            </div>
+        </section>
+    </main>
 
 <script src="./assets/js/script.jp"></script>
 

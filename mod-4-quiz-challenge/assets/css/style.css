@@ -9,21 +9,16 @@
       }
   
   body {
-    background: rgb(248, 249, 253);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: var(--secondary-color);
-    display: flex;
-    min-height: 100vh;
-    flex-direction: row;
-    text-align: center; 
-    
   }
 
-  .header {
-    background-color: var(--primary-color);
-    display: inline-block;
-    position: fixed;
-    margin-bottom: 100px;
+  header {
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 50px;
   }
 
   .scoresContainer {
@@ -47,16 +42,26 @@
     margin-right: 40px;
   }
 
-  .quiz-Container {
+  .top-container {
     text-align: center;
     color: var(--secondary-color);
     display: flex;
-    justify-content: center;       
+    flex-wrap: wrap;
+    justify-content: center;     
   }
 
   .intro {
+    width: 50%;
+    height: 300px;
     margin: 200px auto;
     color: rgb(4, 34, 73);
     text-align: center;
   }
 
+.middle-container {
+  display: none;
+}
+  
+.bottom-container {
+  display: none;
+}
