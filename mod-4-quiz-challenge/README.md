@@ -2,17 +2,17 @@
 
 The purpose of this project is to use Javascript functions and Document Object Models as learned in Module 4 to create an interactive quiz that allows the user to answer 5 code related questions and saves the user's score, equal to time left after completing the quiz, into local storage along with the user's initials.  
 
-![screenshot of High Score page](https://lnd4812/github.io/../../../assets/images/.png).
+![screenshot of High Score page](https://lnd4812/github.io/quiz-challenge-repo/mod-4-quiz-challenge/assets/images/high-score-display.png)
 
 There are a number of buttons required to initiate certain actions called by eventlistener fucntions, along with several interconnected functions, to proceed through the quiz in the allotted time, input initials to be saved in local storage along with the score and then be retrieved from local storage to display in the opening section of the program.
 
-![screenshot of initial display of program](https://lnd4812/).
+![screenshot of initial display of program](https://lnd4812/github.io/quiz-challenge-repo/mod-4-quiz-challenge/assets/images/opening.png).
 
 The user is asked to click on one of four choices for each of 5 questions via a button created from the DOM.  Questions are stored in an array, each with arrays of their own containing the four questions, and the correct answer which is matched against the users selection to indicate whether the choice was correct or wrong.  If wrong, the user is penalized by a reduction in time remaining of 10 seconds.
 
 If the user answers all 5 questions before the timer runs out, the time remaining is allocated to the variable holding the score; if the user runs out of time, the final score will be 0.  
 
-![screenshot of results page](https://lnd4812/github.io/../../../assets/images/)
+![screenshot of results page](https://lnd4812/github.io/quiz-challenge-repo/mod-4-quiz-challenge/assets/images/enter-initials.png)
 
 ## Requirements
 
@@ -26,8 +26,8 @@ Javascript
 
 ## Deployment
 
-This site has been published via [Github Pages](https://lnd4812.github.io//).
-The repository has been stored on [Github](https://github.com/lnd4812/).
+This site has been (will eventually be) published via [Github Pages](https://lnd4812.github.io/quiz-challenge-repor/mod-4-quiz-challenge).
+The repository has been stored on [Github](https://github.com/lnd4812/quiz-challenge-repo-mod-4-quiz-challenge.git).
 
 ## Design
 
