@@ -18,7 +18,7 @@
                 <a href="";>View High Scores</a>   
             </div>
         <div class="timerContainer">
-            <h4>Time Left: <span id="quizTime"></span></h4>
+            <h4>Time Left: <span id="timer"></span></h4>
        </div>
     </header>
     <main>
@@ -35,11 +35,18 @@
                 </div>
             </section>
         </section>    
-        <section class="question-section" id="quiz-questions">
-            <p>Please choose one of the 4 options in each of the following:</p>
+        <section class="question-section">
+            <div id="quiz-questions">
+                <h1 id="the-questions">
+                </h1>
+                <div id="the-options">
+                </div>
+            </div>
         </section>
         <section class="score-container" id="all-done">
-              <div class="capture-high-score">
+            <h1>All Done!</h1>
+            <p>Your score is: <span id="enterScorerInit"></span></p>
+            <div class="capture-high-score">
                <input type="text" name="high-scorer" class="text-input" placeholder="Enter your initials" />
             </div>
             <div class="scores-input">

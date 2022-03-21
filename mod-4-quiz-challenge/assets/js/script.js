@@ -8,7 +8,7 @@ var quizSectionEl = document.querySelector(".question-container"); //centerConta
 // centerContainerEl ".center container"
 var quizQuestionsEl = document.querySelector("#quiz-questions"); //questions
 //questions  #questions
-var optionSelectEl = document.querySelector("#quiz-questions.choices"); //questionChoice
+var optionSelectEl = document.querySelector("#the-options"); //questionChoice
 //questionChoiceEl #question-choice
 var highScoreDisplayEl = document.querySelector("#high-scores"); //endContainer
 // end container #.end container
@@ -52,11 +52,6 @@ var quizQuestionsEl = [
   correctChoice: "console.log"
 }
 ]
-// countdown for user to take quiz  (place in div in upper right hand corner)
-//timerEl.textContent = quizTime + ' seconds';
-//decrement timer each second
-//quizTime--;
-
 
 // start the process when "start quiz" button pressed 
 startBtn.addEventListener("click", startQuiz);
@@ -66,7 +61,6 @@ startBtn.addEventListener("click", startQuiz);
 function quizTimer() { //timerStart
   // section is not visible until start button clicked
   quizQuestionsSetEl.style.display = "none"; //centerContainer
-  //centercontinaer
   // call first question, position 0 in array, to start quiz
   quizRunThrough(0); // getQuestion
   //getQuestion
@@ -95,7 +89,7 @@ function quizRunThrough(quesNum) {// function and # of question)
   // if there is still time left from the last user but all questions have been asked, reset to empty to start again
   if (quizTime > 0 && quizQuestions.length > 4) {
     //timeleft
-    document.querySelector("#quiz-questions").textContent = quizQuestions[i].question; //#question-text, questions[i].question
+    document.querySelector("#the-questions").textContent = quizQuestions[i].question; //#question-text, questions[i].question
     optionSelectEl.innerHTML = ""; 
   // create buttons for answer options for each question in sequence
   for(var i = 0; i < quizQuestions.length; i++ ) {
@@ -113,7 +107,7 @@ function quizRunThrough(quesNum) {// function and # of question)
 function checkResult();
  //if user answers question incorrectly, display "wrong" and dock 10 seconds from time, otherwise proceed to next question 
   if(answerOptionEl != correctChoice) {
-    alert("That is wrong! You lose 10 seconds from time remaining.");
+    alert("Sorry, wrong answer! You lose 10 seconds from time remaining.");
     quizTime = quizTime - 10;
   } else {
     alert("Correct!");
@@ -132,13 +126,13 @@ quizTimer();
 
 function inputScore() {
 // if time > 0 and user has answered all questions, display final score based on quiz-time 
-  finalScore = quizTime;
+  yourScore = quizTime;
   optionSelectEl.style.display = none;
   //reset question index to empty
   quizQuestionsEl.innerHTML = "";
   //reveal All Done div to display input field and score
   enterScorerInitEl.style.display = "inherit";
-  document.getElelmentbyId("finalScore").textContent = score;  }
+  document.getElementbyId("yourScore").textContent = score;  }
 
 // User inputs initials after finishing quiz and initials are stored with highScoreTime in local storage
 // need to ensure user enters 2 initials only
@@ -156,12 +150,7 @@ function displayHighScorer() {
   var highestScorer = localStorage.getItem('high-scorer')
   console.log(highestScorer)
 }
-addScore.addEventListener("click", function(event) {
-    
-  // create highScorer record from submission
-  var highScorer = {
-    highScoreTime: highScoreTime.value.trim(),
-    highScoreInit: highScoreInit.value.trim()
+
 };
 
 if (highScoreInit.length > 2) {
