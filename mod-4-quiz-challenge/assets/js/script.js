@@ -8,24 +8,17 @@ var quizSectionEl = document.querySelector(".question-container"); //centerConta
 // centerContainerEl ".center container"
 var quizQuestionsEl = document.querySelector("#quiz-questions"); //questions
 //questions  #questions
-var optionSelectEl = document.querySelector("#the-options"); //questionChoice
-//questionChoiceEl #question-choice
-var highScoreDisplayEl = document.querySelector("#high-scores"); //endContainer
-// end container #.end container
-var enterScorerInit = document.querySelector("#all-done"); //initials?
-// Initials set to empty string
-var quesNum = 0; //start run through of questions at first item in array //currentIndex
-// current index
-var quizTime = 60; // initiate clock at 60 seconds - //timeLeft
-// timeLeft
-var finalScore = ""; // score is empty at first run through//score
-// score
+var optionSelectEl = document.querySelector("#the-options"); 
+var highScoreDisplayEl = document.querySelector("#high-scores");
+var enterScorerInit = ""; 
+var quesNum = 0; //start run through of questions at first item in array 
+var quizTime = 60; // initiate clock at 60 seconds 
+var finalScore = ""; // score is empty at first run through
 
 
-// create array rom querySelector element to store questions and answers with inner array for quiz choices 
-// questions    
+// create array from querySelector element to store questions and answers with inner array for quiz choices 
 var quizQuestionsEl = [
-  // questions
+  
 {
   question: "Commonly used data types do NOT include:",
   choices: ["Strings", "Booleans", "Alerts", "Numbers"],
@@ -55,26 +48,23 @@ var quizQuestionsEl = [
 
 // start the process when "start quiz" button pressed 
 startBtn.addEventListener("click", startQuiz);
-// startButton / timerStart
 
 // start quiz will call timer function to begin countdown 
-function quizTimer() { //timerStart
+function quizTimer() { 
   // section is not visible until start button clicked
-  quizQuestionsSetEl.style.display = "none"; //centerContainer
+  quizQuestionsSetEl.style.display = "none"; 
   // call first question, position 0 in array, to start quiz
-  quizRunThrough(0); // getQuestion
-  //getQuestion
+  quizRunThrough(0); 
+  
   // start timer
   var quizTimeDisplay = setInterval(function() { 
-        // countdowntime
-    // user answers questions until finished or time runs out
-    If (quizTime <= 0 || quesNum === quizQuestions.length); { // if timeLife , = 0, 
-      // if timeleft < = 0 // currentIndex ===5
-      // user is out of time or finished the quiz, 
-      clearInterval(quizTimeDisplay); //countdowntimer
+     // user answers questions until finished or time runs out
+    If (quizTime <= 0 || quesNum === quizQuestions.length); { 
+       // user is out of time or finished the quiz, 
+      clearInterval(quizTimeDisplay); 
       document.getElementById("timer").textContent = "The quiz has ended. Thank you for playing.";
       // go to scorer Initial Input field
-      inputScore(); //endgame
+        inputScore(); 
     } else {
       document.getElementById("timer").textContent = quizTime;
     } 
@@ -84,12 +74,10 @@ function quizTimer() { //timerStart
 };
  
 // quiz question process 
-function quizRunThrough(quesNum) {// function and # of question)
-  //get question(index)
+function quizRunThrough(quesNum) {
   // if there is still time left from the last user but all questions have been asked, reset to empty to start again
   if (quizTime > 0 && quizQuestions.length > 4) {
-    //timeleft
-    document.querySelector("#the-questions").textContent = quizQuestions[i].question; //#question-text, questions[i].question
+    document.querySelector("#the-questions").textContent = quizQuestions[i].question; 
     optionSelectEl.innerHTML = ""; 
   // create buttons for answer options for each question in sequence
   for(var i = 0; i < quizQuestions.length; i++ ) {
@@ -112,7 +100,7 @@ function checkResult();
   } else {
     alert("Correct!");
     //index increased by one after last for loop; check if max reached, if not, next set of questions, otherwise proceed to All Done page to check score and enter initials
-    if (quesNum < = quizQuestions.length) {
+    if (quesNum <= quizQuestions.length) {
       quizRunThrough(quesNum);
     } else {
       inputScore();
@@ -123,7 +111,6 @@ quizTimer();
 
 // Proceed to All Done page to check score and enter initials
 // if time = 0 before user has finished answering all questions, highScore value = 0.  display "try again next time"
-
 function inputScore() {
 // if time > 0 and user has answered all questions, display final score based on quiz-time 
   yourScore = quizTime;
@@ -137,38 +124,29 @@ function inputScore() {
 // User inputs initials after finishing quiz and initials are stored with highScoreTime in local storage
 // need to ensure user enters 2 initials only
 
-var highScorerInit = document.querySelector("input[name='high-scorer']").value;
-if (highScorerInit.length > 2) {
-  alert("Only 2 initials are accepted. Please reenter.");
-} else
+var highScorer = document.querySelector("input[name='high-scorer']").value;
+//save score and initials to local storage
   var addScore = document.querySelector("#add-score");
   localStorage.setItem("addScore", score);
-} localStorage.setItem(highScorerInit', highscorer);
-}
-
-function displayHighScorer() {
-  var highestScorer = localStorage.getItem('high-scorer')
-  console.log(highestScorer)
-}
+  localStorage.setItem(("highScorer", JSON.stringify(highScorer)));
 
 };
+  function displayHighScorer() {
+    var highestScorer = localStorage.getItem('high-scorer')
+    var highScore = localStorage.getItem('score', JSON.stringify(score));
+    highScoreDisplayEl.querySelector("#view-score-btn").textContent = "high score = " + highScore + " achieved by " + highestScorer; 
+  
+  };
 
-if (highScoreInit.length > 2) {
-  alert("This field is limited to 2 characters only; please try again");
-  return false;
-{
-  else {
 
-  // set new submission to local storage 
-  localStorage.setItem("highScorer", JSON.stringify(highScorer));
-};  
-// High Scores page will feature a blank input field that displays up to top 3 scores, each of the top 3 numbers (so need ordered list here)
+
 
 // set event listeners for click of either Go Back or Clear High Scores button on High Scores page
-// create edit button
 var goBackButton = document.querySelector("#go-back");
 
 var clearHighScores = document.querySelector("#clear-scores");
+
+var ViewScoreBtn = document.querySelector("#view-score-btn");
 
 var highScoreDisplayEl = function (event) {
   var targetEl = event.target;
@@ -183,30 +161,15 @@ var highScoreDisplayEl = function (event) {
 
 startQuiz();
 
-
-// add event listener to start quiz when button clicked
-
   
 // for back button
 goBackButton.addEventListener("click", goback );
 
 // Attach event listener to restore timer to 60 once start quiz button is clicked
 clearHighScores.addEventListener("click", clearscores);
-  
-// Attach event listener to decrement button element
-decrementEl.addEventListener("click", function() {
-  // Action will fire if answer is "wrong"
-    // if quiz answer is wrong
-    quizTime = quizTime - 10;
-    setCounterText();
-  }
-});
 
-
-
-
-
-
+// for high score button
+viewScoreBtn.addEventListener("click", displayHighScorer);
 
 
 
