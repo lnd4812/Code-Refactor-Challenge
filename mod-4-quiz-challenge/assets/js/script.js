@@ -4,10 +4,8 @@
 var startBtn = document.querySelector("#start");
 
 // establish variables for use in running necessary questions
-var quizSectionEl = document.querySelector(".question-container"); //centerContainer
-// centerContainerEl ".center container"
-var quizQuestionsEl = document.querySelector("#quiz-questions"); //questions
-//questions  #questions
+var quizSectionEl = document.querySelector(".question-container"); 
+var quizQuestionsEl = document.querySelector("#quiz-questions"); 
 var optionSelectEl = document.querySelector("#the-options"); 
 var highScoreDisplayEl = document.querySelector("#high-scores");
 var enterScorerInit = ""; 
@@ -15,10 +13,8 @@ var quesNum = 0; //start run through of questions at first item in array
 var quizTime = 60; // initiate clock at 60 seconds 
 var finalScore = ""; // score is empty at first run through
 
-
 // create array from querySelector element to store questions and answers with inner array for quiz choices 
 var quizQuestionsEl = [
-  
 {
   question: "Commonly used data types do NOT include:",
   choices: ["Strings", "Booleans", "Alerts", "Numbers"],
@@ -55,7 +51,6 @@ function quizTimer() {
   quizQuestionsSetEl.style.display = "none"; 
   // call first question, position 0 in array, to start quiz
   quizRunThrough(0); 
-  
   // start timer
   var quizTimeDisplay = setInterval(function() { 
      // user answers questions until finished or time runs out
@@ -65,11 +60,12 @@ function quizTimer() {
       document.getElementById("timer").textContent = "The quiz has ended. Thank you for playing.";
       // go to scorer Initial Input field
         inputScore(); 
-    } else {
+    //} else { getting error expecting statement but not sure why
       document.getElementById("timer").textContent = quizTime;
+      quizTime--;
     } 
     // decrease time by 1 second
-    quizTime--;
+   
     }, 1000);
 };
  
@@ -138,9 +134,6 @@ var highScorer = document.querySelector("input[name='high-scorer']").value;
   
   };
 
-
-
-
 // set event listeners for click of either Go Back or Clear High Scores button on High Scores page
 var goBackButton = document.querySelector("#go-back");
 
@@ -158,6 +151,7 @@ var highScoreDisplayEl = function (event) {
 
 }
 //Score & Initials stored in Local storage. display top 3 scores - need function to update that
+};
 
 startQuiz();
 
@@ -176,8 +170,3 @@ viewScoreBtn.addEventListener("click", displayHighScorer);
 
 
 
-
-
-
-
-// addEventListener('click,startQuiz()):
