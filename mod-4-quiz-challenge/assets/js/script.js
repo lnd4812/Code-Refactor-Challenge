@@ -4,20 +4,28 @@
 var startBtn = document.querySelector("#start");
 
 // establish variables for use in running necessary questions
-var quizSectionEl = document.querySelector(".question-section");
-var quizQuestionsEl = document.querySelector("#quiz-questions");
-var optionSelectEl = document.querySelector("#quiz-questions.choices");
-var highScoreDisplayEl = document.querySelector("#high-scores");
-var enterScorerInit = document.querySelector("#all-done");
-var formEl = document.createElement("#highScoreDisplayForm");
-var timerEl = document.querySelector(".timer");
-var quesNum = 0; //start run through of questions at first item in array 
-var quizTime = 60; // initiate clock at 60 seconds
-var finalScore = ""; // score is empty at first run through
+var quizSectionEl = document.querySelector(".question-container"); //centerContainer
+// centerContainerEl ".center container"
+var quizQuestionsEl = document.querySelector("#quiz-questions"); //questions
+//questions  #questions
+var optionSelectEl = document.querySelector("#quiz-questions.choices"); //questionChoice
+//questionChoiceEl #question-choice
+var highScoreDisplayEl = document.querySelector("#high-scores"); //endContainer
+// end container #.end container
+var enterScorerInit = document.querySelector("#all-done"); //initials?
+// Initials set to empty string
+var quesNum = 0; //start run through of questions at first item in array //currentIndex
+// current index
+var quizTime = 60; // initiate clock at 60 seconds - //timeLeft
+// timeLeft
+var finalScore = ""; // score is empty at first run through//score
+// score
 
 
-// create array rom querySelector element to store questions and answers with inner array for quiz choices     
-var quizQuestionSetEl = [
+// create array rom querySelector element to store questions and answers with inner array for quiz choices 
+// questions    
+var quizQuestionsEl = [
+  // questions
 {
   question: "Commonly used data types do NOT include:",
   choices: ["Strings", "Booleans", "Alerts", "Numbers"],
@@ -45,30 +53,36 @@ var quizQuestionSetEl = [
 }
 ]
 // countdown for user to take quiz  (place in div in upper right hand corner)
-timerEl.textContent = quizTime + ' seconds';
+//timerEl.textContent = quizTime + ' seconds';
 //decrement timer each second
-quizTime--;
+//quizTime--;
 
 
 // start the process when "start quiz" button pressed 
 startBtn.addEventListener("click", startQuiz);
+// startButton / timerStart
 
 // start quiz will call timer function to begin countdown 
-function quizTimer() {
+function quizTimer() { //timerStart
   // section is not visible until start button clicked
-  quizQuestionsSetEl.style.display = "none";
-
+  quizQuestionsSetEl.style.display = "none"; //centerContainer
+  //centercontinaer
   // call first question, position 0 in array, to start quiz
-  var quizTimeDisplay = setInterval(function() {
+  quizRunThrough(0); // getQuestion
+  //getQuestion
+  // start timer
+  var quizTimeDisplay = setInterval(function() { 
+        // countdowntime
     // user answers questions until finished or time runs out
-    If (quizTime <= 0 || quesNum === quizQuestions.length); {
+    If (quizTime <= 0 || quesNum === quizQuestions.length); { // if timeLife , = 0, 
+      // if timeleft < = 0 // currentIndex ===5
       // user is out of time or finished the quiz, 
-      clearInterval(quizTimeDisplay); 
+      clearInterval(quizTimeDisplay); //countdowntimer
       document.getElementById("timer").textContent = "The quiz has ended. Thank you for playing.";
       // go to scorer Initial Input field
-      inputScore();
+      inputScore(); //endgame
     } else {
-      document.getElementById("timer").textContent = "Time remaining";
+      document.getElementById("timer").textContent = quizTime;
     } 
     // decrease time by 1 second
     quizTime--;
@@ -77,58 +91,65 @@ function quizTimer() {
  
 // quiz question process 
 function quizRunThrough(quesNum) {// function and # of question)
-  if (quizTime > 0 && quizQuestions.length < 5) {
-    document.querySelector("#quiz-questions").textContent = quizQuestions[quesNum].question;
-    // set answer selection to empty
-    answerOptionEl.innerHTML = ""; 
+  //get question(index)
+  // if there is still time left from the last user but all questions have been asked, reset to empty to start again
+  if (quizTime > 0 && quizQuestions.length > 4) {
+    //timeleft
+    document.querySelector("#quiz-questions").textContent = quizQuestions[i].question; //#question-text, questions[i].question
+    optionSelectEl.innerHTML = ""; 
   // create buttons for answer options for each question in sequence
   for(var i = 0; i < quizQuestions.length; i++ ) {
-    var option = document.createElement('button');
+    var option = document.createElement("button");
     option.setAttribute("class", "option-btn"); 
     option.setAttribute("value", quizQuestions[quesNum].choices[i]);
     option.textContent = quizQuestions[quesNum].choices[i];
-    option.onclick = checkAnswer;
+    option.onclick = checkResult;
     answerOptionEl.appendChild(option);
-  };
+    };
   } else { 
       inputScore();
 }
-// check if answer correct or wrong
-function checkAnswer();
-
+// check if user answered correctly
+function checkResult();
  //if user answers question incorrectly, display "wrong" and dock 10 seconds from time, otherwise proceed to next question 
-  if(answerOptionEl === correctChoice) {
-    alert("Wrong! You lose 10 seconds");
+  if(answerOptionEl != correctChoice) {
+    alert("That is wrong! You lose 10 seconds from time remaining.");
     quizTime = quizTime - 10;
   } else {
     alert("Correct!");
-    i++;
+    //index increased by one after last for loop; check if max reached, if not, next set of questions, otherwise proceed to All Done page to check score and enter initials
+    if (quesNum < = quizQuestions.length) {
+      quizRunThrough(quesNum);
+    } else {
+      inputScore();
+    }
   }
 
 quizTimer();
+
+// Proceed to All Done page to check score and enter initials
 // if time = 0 before user has finished answering all questions, highScore value = 0.  display "try again next time"
 
 function inputScore() {
 // if time > 0 and user has answered all questions, display final score based on quiz-time 
-finalScore = quizTime;
-quies
-// add function to end game and go to next 
-var highScoreTime = document.querySelector("#quiz-time");
-// style display = "none";
-// then style display = "inherit"
-  }
-
-
+  finalScore = quizTime;
+  optionSelectEl.style.display = none;
+  //reset question index to empty
+  quizQuestionsEl.innerHTML = "";
+  //reveal All Done div to display input field and score
+  enterScorerInitEl.style.display = "inherit";
+  document.getElelmentbyId("finalScore").textContent = score;  }
 
 // User inputs initials after finishing quiz and initials are stored with highScoreTime in local storage
 // need to ensure user enters 2 initials only
 
-
-var highScorerInit = document.querySelector("input[name='high-scorer']").value
-var addScoreButton = document.querySelector("#add-score");
-
-function addHighScorer(highScorerInit) {
-  localStorage.setItem('highScorerInit', highscorer)
+var highScorerInit = document.querySelector("input[name='high-scorer']").value;
+if (highScorerInit.length > 2) {
+  alert("Only 2 initials are accepted. Please reenter.");
+} else
+  var addScore = document.querySelector("#add-score");
+  localStorage.setItem("addScore", score);
+} localStorage.setItem(highScorerInit', highscorer);
 }
 
 function displayHighScorer() {
